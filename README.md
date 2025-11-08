@@ -73,7 +73,13 @@ systemd-analyze cat-config sysctl
 git clone https://github.com/xbucd/sysctl
 cd sysctl
 ```
-
+OR
+use curl for fast deployment (recommend):
+```bash
+   sudo curl https://raw.githubusercontent.com/xbucd/sysctl/refs/heads/main/99-hardening.conf -o /etc/sysctl.d/99-hardening.conf
+   # this command will download 99-hardening.conf to /etc/sysctl.d/
+```
+skip step 3
 2. **Review the configuration** carefully:
 ```bash
 less 99-hardening.conf
